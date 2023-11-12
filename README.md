@@ -4,6 +4,16 @@
 
 Blog-Project is a web application that allows users to create accounts, log in, write articles, and manage their blog content. The project is built using React (Vite for the build system), Tailwind CSS for styling, and Appwrite as the backend service.
 
+## Take a test drive of the application
+- Test Email
+```
+test@gmail.com
+```
+- Test Password
+```
+12345678
+```
+
 ## Features
 
 1. **User Authentication:**
