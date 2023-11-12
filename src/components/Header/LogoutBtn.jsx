@@ -8,7 +8,7 @@ const LogoutBtn = () => {
     const dispatch = useDispatch();
 
     const logoutHandler = () => {
-        authService.logout().
+        authService.deleteSeason().
             then(() => {
                 dispatch(logout());
             })

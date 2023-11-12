@@ -1,7 +1,8 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import React from 'react'
 
-const Button = (
+const Button = ({
     children,
     type="button",
     bgColor="bg-blue-500",
@@ -9,7 +10,7 @@ const Button = (
     textColor="text-white",
     className="",
     ...prop
-) => {
+}) => {
   return (
     <button className={`py-2 px-4 rounded-lg ${bgColor} ${hoverBgColor} ${textColor} ${className}`} 
         {...prop}

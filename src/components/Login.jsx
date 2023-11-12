@@ -10,7 +10,7 @@ import { Button, Input, Logo } from "../components/index";
 function Login() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const { register, handelSubmit } = useForm();
+  const { register, handleSubmit } = useForm();
   const [error, setError] = useState("");
 
   const login = async (data) => {
@@ -26,6 +26,9 @@ function Login() {
       setError(error);
     }
   };
+
+
+
 
   return (
     <div className="flex items-center justify-center w-full">
@@ -49,8 +52,9 @@ function Login() {
             Sign Up
           </Link>
         </p>
-        {error && <p className="text-red-600 text-center mt-8">{error}</p>}
-        <form onSubmit={handelSubmit(login)} className="mt-8">
+        { error && <p className="text-red-600 text-center mt-8">{error.message}</p>} 
+  
+        <form onSubmit={handleSubmit(login)} className="mt-8">
           <div className="space-y-5">
             <Input
               label="Email"

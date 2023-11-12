@@ -14,7 +14,8 @@ export class Service{
         this.bucket = new Storage(this.client);
     }
 
-    async createPost({title,slug, content, featuredImage, status, userId}) {
+    async createPost({ title, slug, content, featuredImage, status, userId }) {
+        console.log(` Title ${title} Slug ${slug} Content ${content} Featured Image ${featuredImage} Status ${status} User Id ${userId}`);
         try {
             return await this.databases.createDocument(
                 conf.appwriteDatabaseId,
@@ -25,13 +26,14 @@ export class Service{
                     content,
                     featuredImage,
                     status,
-                    userId
-                },
-            )
+                    userid: userId, // Use "userid" here to match the schema
+                }
+            );
         } catch (error) {
-            console.log("Appwrite Service :: createPost :: error :: ", error);
+            console.log("Appwrite service :: createPost :: error", error);
         }
     }
+    
 
     async updatePost(slug,{title, content, featuredImage, status}) {
         try {
