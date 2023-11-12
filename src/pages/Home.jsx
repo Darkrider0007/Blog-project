@@ -33,13 +33,15 @@ function Home() {
         <Container>
             <div className="flex flex-wrap">
                 {posts.map((post) => (
-                    <div key={post.$id} className='p-2 w-1/4'>
+                    <div key={post.$id} className='p-2 w-full sm:w-1/3 md:w-1/4'>
+                        {/* Adjust the width based on the number of columns you want for different screen sizes */}
                         <PostCard {...post} />
                     </div>
                 ))}
             </div>
         </Container>
     </div>
+
   )
 }
 
