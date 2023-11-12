@@ -23,7 +23,6 @@ function AllPosts() {
             <div className='flex flex-col md:flex-row md:flex-wrap'>
                 {posts.map((post) => (
                     <div key={post.$id} className='p-2 w-full md:w-1/4'>
-                        {console.log(post)}
                         <PostCard {...post}/>
                     </div>
                 ))}
